@@ -7,8 +7,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/sge-network/sge/x/sportevent/keeper"
-	"github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/x/sportevent/keeper"
+	"github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 // SimulateMsgResolveEvent simulates the resolve event flow

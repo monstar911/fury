@@ -4,7 +4,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/spf13/cobra"
 
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 )
 
 // GetTxCmd returns a root CLI command handler for all x/strategicreserve transaction commands.

@@ -4,7 +4,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 )
 
 // GetBetReserveAcc returns the `bet_reserve` module account

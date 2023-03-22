@@ -39,27 +39,27 @@ import (
 	ibctransfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
 	ibc "github.com/cosmos/ibc-go/v3/modules/core"
 	ibchost "github.com/cosmos/ibc-go/v3/modules/core/24-host"
-	sgeappparams "github.com/sge-network/sge/app/params"
-	"github.com/sge-network/sge/x/mint"
-	minttypes "github.com/sge-network/sge/x/mint/types"
+	furyappparams "github.com/fanfury-sports/fury/app/params"
+	"github.com/fanfury-sports/fury/x/mint"
+	minttypes "github.com/fanfury-sports/fury/x/mint/types"
 
-	betmodule "github.com/sge-network/sge/x/bet"
-	betmoduletypes "github.com/sge-network/sge/x/bet/types"
+	betmodule "github.com/fanfury-sports/fury/x/bet"
+	betmoduletypes "github.com/fanfury-sports/fury/x/bet/types"
 
-	sporteventmodule "github.com/sge-network/sge/x/sportevent"
-	sporteventmoduletypes "github.com/sge-network/sge/x/sportevent/types"
+	sporteventmodule "github.com/fanfury-sports/fury/x/sportevent"
+	sporteventmoduletypes "github.com/fanfury-sports/fury/x/sportevent/types"
 
-	strategicreservemodule "github.com/sge-network/sge/x/strategicreserve"
-	strategicreservemoduletypes "github.com/sge-network/sge/x/strategicreserve/types"
+	strategicreservemodule "github.com/fanfury-sports/fury/x/strategicreserve"
+	strategicreservemoduletypes "github.com/fanfury-sports/fury/x/strategicreserve/types"
 
-	dvmmodule "github.com/sge-network/sge/x/dvm"
-	dvmmoduletypes "github.com/sge-network/sge/x/dvm/types"
+	dvmmodule "github.com/fanfury-sports/fury/x/dvm"
+	dvmmoduletypes "github.com/fanfury-sports/fury/x/dvm/types"
 
-	housemodule "github.com/sge-network/sge/x/house"
-	housemoduletypes "github.com/sge-network/sge/x/house/types"
+	housemodule "github.com/fanfury-sports/fury/x/house"
+	housemoduletypes "github.com/fanfury-sports/fury/x/house/types"
 
-	orderbookmodule "github.com/sge-network/sge/x/orderbook"
-	orderbookmoduletypes "github.com/sge-network/sge/x/orderbook/types"
+	orderbookmodule "github.com/fanfury-sports/fury/x/orderbook"
+	orderbookmoduletypes "github.com/fanfury-sports/fury/x/orderbook/types"
 
 	// unnamed import of statik for swagger UI support
 	_ "github.com/cosmos/cosmos-sdk/client/docs/statik"
@@ -115,8 +115,8 @@ var ModuleBasics = module.NewBasicManager(
 )
 
 func appModules(
-	app *SgeApp,
-	encodingConfig sgeappparams.EncodingConfig,
+	app *FuryApp,
+	encodingConfig furyappparams.EncodingConfig,
 	skipGenesisInvariants bool,
 ) []module.AppModule {
 	appCodec := encodingConfig.Marshaler
@@ -160,8 +160,8 @@ func appModules(
 // simulationModules returns modules for simulation manager
 // define the order of the modules for deterministic simulations
 func simulationModules(
-	app *SgeApp,
-	encodingConfig sgeappparams.EncodingConfig,
+	app *FuryApp,
+	encodingConfig furyappparams.EncodingConfig,
 	_ bool,
 ) []module.AppModuleSimulation {
 	appCodec := encodingConfig.Marshaler

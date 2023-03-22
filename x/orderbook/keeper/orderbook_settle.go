@@ -7,8 +7,8 @@ import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/spf13/cast"
 
-	"github.com/sge-network/sge/x/orderbook/types"
-	srtypes "github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/x/orderbook/types"
+	srtypes "github.com/fanfury-sports/fury/x/strategicreserve/types"
 )
 
 // BatchOrderBookSettlements settles order books

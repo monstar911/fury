@@ -7,7 +7,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 const listSeparator = ","

@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 	"github.com/stretchr/testify/require"
 )
 

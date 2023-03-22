@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sge-network/sge/utils"
-	"github.com/sge-network/sge/x/dvm/types"
+	"github.com/fanfury-sports/fury/utils"
+	"github.com/fanfury-sports/fury/x/dvm/types"
 )
 
 // SetActivePubkeysChangeProposal sets a pubkey list change proposal in the store.

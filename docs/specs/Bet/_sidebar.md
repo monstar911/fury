@@ -1,6 +1,6 @@
 <!-- docs/_sidebar.md -->
 
-* [About SGE Network](../../README.md)
+* [About FURY Network](../../README.md)
 * [Modules](README.md)
   * [Bet](specs/bet/01_Overview.md)
     * [Overview](specs/bet/01_Overview.md)

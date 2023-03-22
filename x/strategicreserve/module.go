@@ -15,9 +15,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/sge-network/sge/x/strategicreserve/client/cli"
-	"github.com/sge-network/sge/x/strategicreserve/keeper"
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/x/strategicreserve/client/cli"
+	"github.com/fanfury-sports/fury/x/strategicreserve/keeper"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 )
 
 var (

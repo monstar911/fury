@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/sge-network/sge/x/house/types"
+	"github.com/fanfury-sports/fury/x/house/types"
 )
 
 type msgServer struct {

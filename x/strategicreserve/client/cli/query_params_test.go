@@ -5,9 +5,9 @@ import (
 	"testing"
 
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"
-	"github.com/sge-network/sge/testutil/network"
-	"github.com/sge-network/sge/x/strategicreserve/client/cli"
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/testutil/network"
+	"github.com/fanfury-sports/fury/x/strategicreserve/client/cli"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 	"github.com/stretchr/testify/require"
 )
 

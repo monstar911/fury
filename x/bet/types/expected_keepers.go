@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/types"
-	sporteventtypes "github.com/sge-network/sge/x/sportevent/types"
+	sporteventtypes "github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 // AccountKeeper defines the expected account keeper used for simulations (noalias)

@@ -1,4 +1,4 @@
-module github.com/sge-network/sge
+module github.com/fanfury-sports/fury
 
 go 1.18
 

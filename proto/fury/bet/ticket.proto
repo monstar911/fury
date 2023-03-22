@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+package furynetwork.fury.bet;
+
+import "gogoproto/gogo.proto";
+import "fury/bet/bet_odds.proto";
+import "fury/bet/kyc.proto";
+import "fury/bet/odds_type.proto";
+
+option go_package = "github.com/fanfury-sports/fury/x/bet/types";
+
+// BetPlacementTicketPayload indicates data of bet placement ticket.
+message BetPlacementTicketPayload {
+  // selected_odds is the user-selected odds to place bet.
+  BetOdds selected_odds = 1;
+  // kyc_data contains the details of user kyc.
+  KycDataPayload kyc_data = 2 [ (gogoproto.nullable) = false ];
+  // odds_type is the type of odds that are going to be placed
+  // such as decimal, fraction, moneyline.
+  furynetwork.fury.bet.OddsType odds_type = 3;
+}

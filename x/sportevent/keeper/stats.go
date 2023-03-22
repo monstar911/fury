@@ -2,8 +2,8 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sge-network/sge/utils"
-	"github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/utils"
+	"github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 // SetSportEventStats sets bet statistics in the store

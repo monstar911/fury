@@ -1,0 +1,29 @@
+syntax = "proto3";
+package furynetwork.fury.bet;
+
+import "fury/bet/place_bet_fields.proto";
+
+option go_package = "github.com/fanfury-sports/fury/x/bet/types";
+
+// Msg defines the Msg service.
+service Msg {
+
+  // PlaceBet defines a method to place a bet with the given data.
+  rpc PlaceBet(MsgPlaceBet) returns (MsgPlaceBetResponse);
+}
+
+// MsgPlaceBet defines a message to place a bet with the given data.
+message MsgPlaceBet {
+  // creator is the bettor address.
+  string creator = 1;
+
+  // PlaceBetFields contains bet fields.
+  PlaceBetFields bet = 2;
+}
+
+// MsgPlaceBetResponse is the returning value in the response
+// of MsgPlaceBet request.
+message MsgPlaceBetResponse {
+  string error = 1;
+  PlaceBetFields bet = 2;
+}

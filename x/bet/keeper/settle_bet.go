@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sge-network/sge/x/bet/types"
-	sporteventtypes "github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/x/bet/types"
+	sporteventtypes "github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 // singlePageNum used to return single page result in pagination.

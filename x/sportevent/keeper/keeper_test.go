@@ -6,8 +6,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/golang-jwt/jwt"
-	simappUtil "github.com/sge-network/sge/testutil/simapp"
-	"github.com/sge-network/sge/x/sportevent/keeper"
+	simappUtil "github.com/fanfury-sports/fury/testutil/simapp"
+	"github.com/fanfury-sports/fury/x/sportevent/keeper"
 	"github.com/stretchr/testify/require"
 )
 

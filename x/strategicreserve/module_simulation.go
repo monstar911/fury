@@ -10,9 +10,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/sge-network/sge/testutil/sample"
-	strategicreservesimulation "github.com/sge-network/sge/x/strategicreserve/simulation"
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/testutil/sample"
+	strategicreservesimulation "github.com/fanfury-sports/fury/x/strategicreserve/simulation"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 )
 
 // avoid unused import issue

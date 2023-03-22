@@ -1,0 +1,102 @@
+syntax = "proto3";
+package furynetwork.fury.house;
+
+import "cosmos/base/query/v1beta1/pagination.proto";
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "fury/house/params.proto";
+import "fury/house/deposit.proto";
+import "fury/house/withdraw.proto";
+
+option go_package = "github.com/fanfury-sports/fury/x/house/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  // Params queries the parameters of the module.
+  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/fury/house/params";
+  }
+
+  // Deposits queries all deposits.
+  rpc Deposits(QueryDepositsRequest) returns (QueryDepositsResponse) {
+    option (google.api.http).get = "/fury/deposits";
+  }
+
+  // DepositorDeposits queries deposits info for given depositor.
+  rpc DepositorDeposits(QueryDepositorDepositsRequest)
+      returns (QueryDepositorDepositsResponse) {
+    option (google.api.http).get = "/fury/deposits/{depositor_address}";
+  }
+
+  // DepositorWithdrawals queries withdrawals info for given depositor.
+  rpc DepositorWithdrawals(QueryDepositorWithdrawalsRequest)
+      returns (QueryDepositorWithdrawalsResponse) {
+    option (google.api.http).get = "/fury/withdrawals/{depositor_address}";
+  }
+}
+
+// QueryParamsRequest is the request type for the Query/Params RPC method.
+// Query/Params RPC method.
+message QueryParamsRequest {}
+
+// QueryParamsResponse is the response type for the Query/Params RPC method.
+// Query/Params RPC method.
+message QueryParamsResponse {
+  // params holds all the parameters of this module.
+  Params params = 1 [ (gogoproto.nullable) = false ];
+}
+
+// QueryDepositsRequest is request type for Query/Deposits RPC method.
+message QueryDepositsRequest {
+  // pagination defines an optional pagination for the request.
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+// QueryDepositsResponse is response type for the Query/Deposits RPC method
+message QueryDepositsResponse {
+  // deposits contains all the queried deposits.
+  repeated Deposit deposits = 1 [ (gogoproto.nullable) = false ];
+
+  // pagination defines the pagination in the response.
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+// QueryDepositorDepositsRequest is request type for Query/DepositorDeposits RPC
+// method.
+message QueryDepositorDepositsRequest {
+  // depositor_addr defines the depositor address to query for.
+  string depositor_address = 1;
+
+  // pagination defines an optional pagination for the request.
+  cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+// QueryDepositorDepositsResponse is response type for the
+// Query/DepositorDeposits RPC method
+message QueryDepositorDepositsResponse {
+  // deposits contains all the queried deposits.
+  repeated Deposit deposits = 1 [ (gogoproto.nullable) = false ];
+
+  // pagination defines the pagination in the response.
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
+
+// QueryDepositorWithdrawalsRequest is request type for
+// Query/DepositorWithdrawals RPC method.
+message QueryDepositorWithdrawalsRequest {
+  // depositor_addr defines the depositor address to query for.
+  string depositor_address = 1;
+
+  // pagination defines an optional pagination for the request.
+  cosmos.base.query.v1beta1.PageRequest pagination = 2;
+}
+
+// QueryDepositorWithdrawalsResponse is response type for the
+// Query/DepositorWithdrawals RPC method
+message QueryDepositorWithdrawalsResponse {
+  // withdrawals contains all the queried withdrawals.
+  repeated Withdrawal withdrawals = 1 [ (gogoproto.nullable) = false ];
+
+  // pagination defines the pagination in the response.
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}

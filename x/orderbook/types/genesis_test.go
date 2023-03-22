@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/sge-network/sge/x/orderbook/types"
+	"github.com/fanfury-sports/fury/x/orderbook/types"
 	"github.com/stretchr/testify/require"
 )
 

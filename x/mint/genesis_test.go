@@ -3,10 +3,10 @@ package mint_test
 import (
 	"testing"
 
-	"github.com/sge-network/sge/testutil/nullify"
-	simappUtil "github.com/sge-network/sge/testutil/simapp"
-	"github.com/sge-network/sge/x/mint"
-	"github.com/sge-network/sge/x/mint/types"
+	"github.com/fanfury-sports/fury/testutil/nullify"
+	simappUtil "github.com/fanfury-sports/fury/testutil/simapp"
+	"github.com/fanfury-sports/fury/x/mint"
+	"github.com/fanfury-sports/fury/x/mint/types"
 	"github.com/stretchr/testify/require"
 )
 

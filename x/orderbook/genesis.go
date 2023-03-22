@@ -3,8 +3,8 @@ package orderbook
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sge-network/sge/x/orderbook/keeper"
-	"github.com/sge-network/sge/x/orderbook/types"
+	"github.com/fanfury-sports/fury/x/orderbook/keeper"
+	"github.com/fanfury-sports/fury/x/orderbook/types"
 )
 
 // InitGenesis sets the parameters for the provided keeper.

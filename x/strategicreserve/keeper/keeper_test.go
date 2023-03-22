@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	simappUtil "github.com/sge-network/sge/testutil/simapp"
-	"github.com/sge-network/sge/x/strategicreserve/keeper"
+	simappUtil "github.com/fanfury-sports/fury/testutil/simapp"
+	"github.com/fanfury-sports/fury/x/strategicreserve/keeper"
 	"github.com/stretchr/testify/require"
 )
 

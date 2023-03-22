@@ -40,7 +40,7 @@ message PlaceBetFields {
   string ticket = 3;
 
   // odds_type is the type of odds bettor choose such as decimal, fraction
-  sgenetwork.sge.bet.OddsType odds_type = 4;
+  furynetwork.fury.bet.OddsType odds_type = 4;
 }
 
 // MsgPlaceBetResponse is the returning value in the response of MsgPlaceBet request
@@ -63,7 +63,7 @@ message MsgPlaceBetResponse {
  "kyc_data": {
    "ignore": false,
    "approved": true,
-   "id": "sge1w77wnncp6w6llqt0ysgahpxjscg8wspw43jvtd"
+   "id": "fury1w77wnncp6w6llqt0ysgahpxjscg8wspw43jvtd"
  },
  "odds_type":1,
  "exp": 1667863498866062000,

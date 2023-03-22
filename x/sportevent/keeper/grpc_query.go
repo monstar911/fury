@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 var _ types.QueryServer = Keeper{}

@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/version"
-	"github.com/sge-network/sge/x/house/types"
+	"github.com/fanfury-sports/fury/x/house/types"
 	"github.com/spf13/cast"
 	"github.com/spf13/cobra"
 )

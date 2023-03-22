@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/version"
-	"github.com/sge-network/sge/x/house/types"
+	"github.com/fanfury-sports/fury/x/house/types"
 	"github.com/spf13/cobra"
 )
 
@@ -22,7 +22,7 @@ func CmdDeposit() *cobra.Command {
 			fmt.Sprintf(`Deposit coins to be part of a house corresponding to a sport event.
 
 				Example:
-				$ %s tx house deposit bc79a72c-ad7e-4cf5-91a2-98af2751e812 1000usge --from mykey
+				$ %s tx house deposit bc79a72c-ad7e-4cf5-91a2-98af2751e812 1000ufury --from mykey
 				`,
 				version.AppName,
 			),

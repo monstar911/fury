@@ -1,0 +1,46 @@
+syntax = "proto3";
+package furynetwork.fury.strategicreserve;
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+
+import "fury/strategicreserve/params.proto";
+import "fury/strategicreserve/reserver.proto";
+
+option go_package = "github.com/fanfury-sports/fury/x/strategicreserve/types";
+
+// Query defines the gRPC querier service.
+service Query {
+  // Parameters queries the parameters of the module.
+  rpc Params(QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/fury/strategic-reserve/params";
+  }
+
+  // Reserver returns the Reserver value.
+  rpc Reserver(QueryReserverRequest) returns (QueryReserverResponse) {
+    option (google.api.http).get = "/fury/strategic-reserve/reserver";
+  }
+}
+
+// QueryParamsRequest is request type for the Query/Params RPC method.
+// Query/Params RPC method.
+message QueryParamsRequest {}
+
+// QueryParamsResponse is response type for the Query/Params RPC method.
+// Query/Params RPC method.
+message QueryParamsResponse {
+  // params holds all the parameters of this module.
+  Params params = 1 [ (gogoproto.nullable) = false ];
+}
+
+// QueryReserverRequest is the request type for the Query/Inflation RPC method.
+// Query/Reserver RPC method.
+message QueryReserverRequest {}
+
+// QueryReserverResponse is the response type for the Query/Inflation RPC
+// method.
+// Query/Reserver RPC method.
+message QueryReserverResponse {
+  // reserver is a holder for sr fund management.
+  Reserver reserver = 1;
+}

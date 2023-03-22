@@ -10,7 +10,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

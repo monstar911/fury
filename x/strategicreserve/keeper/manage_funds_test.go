@@ -6,8 +6,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	simappUtil "github.com/sge-network/sge/testutil/simapp"
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	simappUtil "github.com/fanfury-sports/fury/testutil/simapp"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 	"github.com/stretchr/testify/require"
 )
 

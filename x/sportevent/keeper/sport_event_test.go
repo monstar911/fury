@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sge-network/sge/testutil/nullify"
-	"github.com/sge-network/sge/x/sportevent/keeper"
-	"github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/testutil/nullify"
+	"github.com/fanfury-sports/fury/x/sportevent/keeper"
+	"github.com/fanfury-sports/fury/x/sportevent/types"
 	"github.com/spf13/cast"
 	"github.com/stretchr/testify/require"
 )

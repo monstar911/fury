@@ -4,8 +4,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/sge-network/sge/app/params"
-	"github.com/sge-network/sge/x/orderbook/types"
+	"github.com/fanfury-sports/fury/app/params"
+	"github.com/fanfury-sports/fury/x/orderbook/types"
 )
 
 // transferFundsFromUserToModule transfers the given amount from
@@ -13,10 +13,10 @@ import (
 // Returns an error if the account holder has insufficient balance.
 func (k Keeper) transferFundsFromUserToModule(ctx sdk.Context, address sdk.AccAddress, moduleAccName string, amount sdk.Int) error {
 	// Get the spendable balance of the account holder
-	usgeCoins := k.bankKeeper.SpendableCoins(ctx, address).AmountOf(params.BaseCoinUnit)
+	ufuryCoins := k.bankKeeper.SpendableCoins(ctx, address).AmountOf(params.BaseCoinUnit)
 
 	// If account holder has insufficient balance, return error
-	if usgeCoins.LT(amount) {
+	if ufuryCoins.LT(amount) {
 		return sdkerrors.Wrapf(types.ErrInsufficientUserBalance, " User Address: %s", address.String())
 	}
 

@@ -16,12 +16,12 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/sge-network/sge/testutil/network"
-	"github.com/sge-network/sge/testutil/nullify"
-	simappUtil "github.com/sge-network/sge/testutil/simapp"
-	"github.com/sge-network/sge/x/bet/client/cli"
-	"github.com/sge-network/sge/x/bet/types"
-	sporteventtypes "github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/testutil/network"
+	"github.com/fanfury-sports/fury/testutil/nullify"
+	simappUtil "github.com/fanfury-sports/fury/testutil/simapp"
+	"github.com/fanfury-sports/fury/x/bet/client/cli"
+	"github.com/fanfury-sports/fury/x/bet/types"
+	sporteventtypes "github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 const testSportEventUID = "5db09053-2901-4110-8fb5-c14e21f8d555"

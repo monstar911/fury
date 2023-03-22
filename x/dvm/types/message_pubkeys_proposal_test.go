@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sge-network/sge/testutil/sample"
-	"github.com/sge-network/sge/x/dvm/types"
+	"github.com/fanfury-sports/fury/testutil/sample"
+	"github.com/fanfury-sports/fury/x/dvm/types"
 	"github.com/stretchr/testify/require"
 )
 

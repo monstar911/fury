@@ -3,10 +3,10 @@ package dvm_test
 import (
 	"testing"
 
-	"github.com/sge-network/sge/testutil/nullify"
-	simappUtil "github.com/sge-network/sge/testutil/simapp"
-	"github.com/sge-network/sge/x/dvm"
-	"github.com/sge-network/sge/x/dvm/types"
+	"github.com/fanfury-sports/fury/testutil/nullify"
+	simappUtil "github.com/fanfury-sports/fury/testutil/simapp"
+	"github.com/fanfury-sports/fury/x/dvm"
+	"github.com/fanfury-sports/fury/x/dvm/types"
 	"github.com/stretchr/testify/require"
 )
 

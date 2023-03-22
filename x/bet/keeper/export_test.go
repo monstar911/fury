@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"github.com/sge-network/sge/x/bet/types"
-	sporteventtypes "github.com/sge-network/sge/x/sportevent/types"
+	"github.com/fanfury-sports/fury/x/bet/types"
+	sporteventtypes "github.com/fanfury-sports/fury/x/sportevent/types"
 )
 
 // KeeperTest is a wrapper object for the keeper, It is being used

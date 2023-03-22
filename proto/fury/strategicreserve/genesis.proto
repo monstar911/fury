@@ -1,0 +1,17 @@
+syntax = "proto3";
+package furynetwork.fury.strategicreserve;
+
+import "gogoproto/gogo.proto";
+
+import "fury/strategicreserve/params.proto";
+import "fury/strategicreserve/reserver.proto";
+
+option go_package = "github.com/fanfury-sports/fury/x/strategicreserve/types";
+
+// GenesisState defines the strategicreserve module's genesis state.
+message GenesisState {
+  // reserver is a space for holding current locked/unlocked amount information.
+  Reserver reserver = 1 [ (gogoproto.nullable) = false ];
+  // params contains all of the parameters of the sr module.
+  Params params = 2 [ (gogoproto.nullable) = false ];
+}

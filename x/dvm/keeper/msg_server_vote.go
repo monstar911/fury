@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sge-network/sge/x/dvm/types"
+	"github.com/fanfury-sports/fury/x/dvm/types"
 )
 
 // VotePubkeysChange is the main transaction of DVM to vote for a pubkeys list change proposal.

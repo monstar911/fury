@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sge-network/sge/app/params"
-	bettypes "github.com/sge-network/sge/x/bet/types"
-	"github.com/sge-network/sge/x/strategicreserve/types"
+	"github.com/fanfury-sports/fury/app/params"
+	bettypes "github.com/fanfury-sports/fury/x/bet/types"
+	"github.com/fanfury-sports/fury/x/strategicreserve/types"
 )
 
 // ProcessBetPlacement transfers the bet fee from the bettor's account
@@ -232,13 +232,13 @@ func (k Keeper) transferFundsFromUserToModule(ctx sdk.Context,
 	address sdk.AccAddress, moduleAccName string, amount sdk.Int,
 ) error {
 	// Get the spendable balance of the account holder
-	usgeCoins := k.bankKeeper.SpendableCoins(ctx,
+	ufuryCoins := k.bankKeeper.SpendableCoins(ctx,
 		address).AmountOf(params.DefaultBondDenom)
 
 	// If account holder has insufficient balance, return error
-	if usgeCoins.LT(amount) {
+	if ufuryCoins.LT(amount) {
 		k.Logger(ctx).Error(fmt.Sprintf(types.LogErrInsufficientUserBalance,
-			address, usgeCoins, amount))
+			address, ufuryCoins, amount))
 		return sdkerrors.Wrapf(types.ErrInsufficientUserBalance, address.String())
 	}
 
