@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.mint;
+package furysports.fury.mint;
 
 import "gogoproto/gogo.proto";
 

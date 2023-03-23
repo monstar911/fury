@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.bet;
+package furysports.fury.bet;
 
 import "gogoproto/gogo.proto";
 import "google/api/annotations.proto";
@@ -72,7 +72,7 @@ message QueryBetRequest {
 // Query/Bet RPC method.
 message QueryBetResponse {
   Bet bet = 1 [ (gogoproto.nullable) = false ];
-  furynetwork.fury.sportevent.SportEvent sport_event = 2
+  furysports.fury.sportevent.SportEvent sport_event = 2
       [ (gogoproto.nullable) = false ];
 }
 

@@ -1220,28 +1220,28 @@ func (m *QueryParticipationFulfilledBetsResponse) GetPagination() *query.PageRes
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furynetwork.fury.orderbook.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furynetwork.fury.orderbook.QueryParamsResponse")
-	proto.RegisterType((*QueryOrderBooksRequest)(nil), "furynetwork.fury.orderbook.QueryOrderBooksRequest")
-	proto.RegisterType((*QueryOrderBooksResponse)(nil), "furynetwork.fury.orderbook.QueryOrderBooksResponse")
-	proto.RegisterType((*QueryOrderBookRequest)(nil), "furynetwork.fury.orderbook.QueryOrderBookRequest")
-	proto.RegisterType((*QueryOrderBookResponse)(nil), "furynetwork.fury.orderbook.QueryOrderBookResponse")
-	proto.RegisterType((*QueryBookParticipationsRequest)(nil), "furynetwork.fury.orderbook.QueryBookParticipationsRequest")
-	proto.RegisterType((*QueryBookParticipationsResponse)(nil), "furynetwork.fury.orderbook.QueryBookParticipationsResponse")
-	proto.RegisterType((*QueryBookParticipationRequest)(nil), "furynetwork.fury.orderbook.QueryBookParticipationRequest")
-	proto.RegisterType((*QueryBookParticipationResponse)(nil), "furynetwork.fury.orderbook.QueryBookParticipationResponse")
-	proto.RegisterType((*QueryBookExposuresRequest)(nil), "furynetwork.fury.orderbook.QueryBookExposuresRequest")
-	proto.RegisterType((*QueryBookExposuresResponse)(nil), "furynetwork.fury.orderbook.QueryBookExposuresResponse")
-	proto.RegisterType((*QueryBookExposureRequest)(nil), "furynetwork.fury.orderbook.QueryBookExposureRequest")
-	proto.RegisterType((*QueryBookExposureResponse)(nil), "furynetwork.fury.orderbook.QueryBookExposureResponse")
-	proto.RegisterType((*QueryParticipationExposuresRequest)(nil), "furynetwork.fury.orderbook.QueryParticipationExposuresRequest")
-	proto.RegisterType((*QueryParticipationExposuresResponse)(nil), "furynetwork.fury.orderbook.QueryParticipationExposuresResponse")
-	proto.RegisterType((*QueryParticipationExposureRequest)(nil), "furynetwork.fury.orderbook.QueryParticipationExposureRequest")
-	proto.RegisterType((*QueryParticipationExposureResponse)(nil), "furynetwork.fury.orderbook.QueryParticipationExposureResponse")
-	proto.RegisterType((*QueryHistoricalParticipationExposuresRequest)(nil), "furynetwork.fury.orderbook.QueryHistoricalParticipationExposuresRequest")
-	proto.RegisterType((*QueryHistoricalParticipationExposuresResponse)(nil), "furynetwork.fury.orderbook.QueryHistoricalParticipationExposuresResponse")
-	proto.RegisterType((*QueryParticipationFulfilledBetsRequest)(nil), "furynetwork.fury.orderbook.QueryParticipationFulfilledBetsRequest")
-	proto.RegisterType((*QueryParticipationFulfilledBetsResponse)(nil), "furynetwork.fury.orderbook.QueryParticipationFulfilledBetsResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furysports.fury.orderbook.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furysports.fury.orderbook.QueryParamsResponse")
+	proto.RegisterType((*QueryOrderBooksRequest)(nil), "furysports.fury.orderbook.QueryOrderBooksRequest")
+	proto.RegisterType((*QueryOrderBooksResponse)(nil), "furysports.fury.orderbook.QueryOrderBooksResponse")
+	proto.RegisterType((*QueryOrderBookRequest)(nil), "furysports.fury.orderbook.QueryOrderBookRequest")
+	proto.RegisterType((*QueryOrderBookResponse)(nil), "furysports.fury.orderbook.QueryOrderBookResponse")
+	proto.RegisterType((*QueryBookParticipationsRequest)(nil), "furysports.fury.orderbook.QueryBookParticipationsRequest")
+	proto.RegisterType((*QueryBookParticipationsResponse)(nil), "furysports.fury.orderbook.QueryBookParticipationsResponse")
+	proto.RegisterType((*QueryBookParticipationRequest)(nil), "furysports.fury.orderbook.QueryBookParticipationRequest")
+	proto.RegisterType((*QueryBookParticipationResponse)(nil), "furysports.fury.orderbook.QueryBookParticipationResponse")
+	proto.RegisterType((*QueryBookExposuresRequest)(nil), "furysports.fury.orderbook.QueryBookExposuresRequest")
+	proto.RegisterType((*QueryBookExposuresResponse)(nil), "furysports.fury.orderbook.QueryBookExposuresResponse")
+	proto.RegisterType((*QueryBookExposureRequest)(nil), "furysports.fury.orderbook.QueryBookExposureRequest")
+	proto.RegisterType((*QueryBookExposureResponse)(nil), "furysports.fury.orderbook.QueryBookExposureResponse")
+	proto.RegisterType((*QueryParticipationExposuresRequest)(nil), "furysports.fury.orderbook.QueryParticipationExposuresRequest")
+	proto.RegisterType((*QueryParticipationExposuresResponse)(nil), "furysports.fury.orderbook.QueryParticipationExposuresResponse")
+	proto.RegisterType((*QueryParticipationExposureRequest)(nil), "furysports.fury.orderbook.QueryParticipationExposureRequest")
+	proto.RegisterType((*QueryParticipationExposureResponse)(nil), "furysports.fury.orderbook.QueryParticipationExposureResponse")
+	proto.RegisterType((*QueryHistoricalParticipationExposuresRequest)(nil), "furysports.fury.orderbook.QueryHistoricalParticipationExposuresRequest")
+	proto.RegisterType((*QueryHistoricalParticipationExposuresResponse)(nil), "furysports.fury.orderbook.QueryHistoricalParticipationExposuresResponse")
+	proto.RegisterType((*QueryParticipationFulfilledBetsRequest)(nil), "furysports.fury.orderbook.QueryParticipationFulfilledBetsRequest")
+	proto.RegisterType((*QueryParticipationFulfilledBetsResponse)(nil), "furysports.fury.orderbook.QueryParticipationFulfilledBetsResponse")
 }
 
 func init() { proto.RegisterFile("fury/orderbook/query.proto", fileDescriptor_8b016841afa49a45) }
@@ -1374,7 +1374,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1383,7 +1383,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) OrderBooks(ctx context.Context, in *QueryOrderBooksRequest, opts ...grpc.CallOption) (*QueryOrderBooksResponse, error) {
 	out := new(QueryOrderBooksResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/OrderBooks", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/OrderBooks", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1392,7 +1392,7 @@ func (c *queryClient) OrderBooks(ctx context.Context, in *QueryOrderBooksRequest
 
 func (c *queryClient) OrderBook(ctx context.Context, in *QueryOrderBookRequest, opts ...grpc.CallOption) (*QueryOrderBookResponse, error) {
 	out := new(QueryOrderBookResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/OrderBook", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/OrderBook", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1401,7 +1401,7 @@ func (c *queryClient) OrderBook(ctx context.Context, in *QueryOrderBookRequest, 
 
 func (c *queryClient) BookParticipations(ctx context.Context, in *QueryBookParticipationsRequest, opts ...grpc.CallOption) (*QueryBookParticipationsResponse, error) {
 	out := new(QueryBookParticipationsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/BookParticipations", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/BookParticipations", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1410,7 +1410,7 @@ func (c *queryClient) BookParticipations(ctx context.Context, in *QueryBookParti
 
 func (c *queryClient) BookParticipation(ctx context.Context, in *QueryBookParticipationRequest, opts ...grpc.CallOption) (*QueryBookParticipationResponse, error) {
 	out := new(QueryBookParticipationResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/BookParticipation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/BookParticipation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1419,7 +1419,7 @@ func (c *queryClient) BookParticipation(ctx context.Context, in *QueryBookPartic
 
 func (c *queryClient) BookExposures(ctx context.Context, in *QueryBookExposuresRequest, opts ...grpc.CallOption) (*QueryBookExposuresResponse, error) {
 	out := new(QueryBookExposuresResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/BookExposures", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/BookExposures", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1428,7 +1428,7 @@ func (c *queryClient) BookExposures(ctx context.Context, in *QueryBookExposuresR
 
 func (c *queryClient) BookExposure(ctx context.Context, in *QueryBookExposureRequest, opts ...grpc.CallOption) (*QueryBookExposureResponse, error) {
 	out := new(QueryBookExposureResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/BookExposure", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/BookExposure", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1437,7 +1437,7 @@ func (c *queryClient) BookExposure(ctx context.Context, in *QueryBookExposureReq
 
 func (c *queryClient) ParticipationExposures(ctx context.Context, in *QueryParticipationExposuresRequest, opts ...grpc.CallOption) (*QueryParticipationExposuresResponse, error) {
 	out := new(QueryParticipationExposuresResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/ParticipationExposures", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/ParticipationExposures", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1446,7 +1446,7 @@ func (c *queryClient) ParticipationExposures(ctx context.Context, in *QueryParti
 
 func (c *queryClient) ParticipationExposure(ctx context.Context, in *QueryParticipationExposureRequest, opts ...grpc.CallOption) (*QueryParticipationExposureResponse, error) {
 	out := new(QueryParticipationExposureResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/ParticipationExposure", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/ParticipationExposure", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1455,7 +1455,7 @@ func (c *queryClient) ParticipationExposure(ctx context.Context, in *QueryPartic
 
 func (c *queryClient) HistoricalParticipationExposures(ctx context.Context, in *QueryHistoricalParticipationExposuresRequest, opts ...grpc.CallOption) (*QueryHistoricalParticipationExposuresResponse, error) {
 	out := new(QueryHistoricalParticipationExposuresResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/HistoricalParticipationExposures", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/HistoricalParticipationExposures", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1464,7 +1464,7 @@ func (c *queryClient) HistoricalParticipationExposures(ctx context.Context, in *
 
 func (c *queryClient) ParticipationFulfilledBets(ctx context.Context, in *QueryParticipationFulfilledBetsRequest, opts ...grpc.CallOption) (*QueryParticipationFulfilledBetsResponse, error) {
 	out := new(QueryParticipationFulfilledBetsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.orderbook.Query/ParticipationFulfilledBets", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.orderbook.Query/ParticipationFulfilledBets", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1554,7 +1554,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/Params",
+		FullMethod: "/furysports.fury.orderbook.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -1572,7 +1572,7 @@ func _Query_OrderBooks_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/OrderBooks",
+		FullMethod: "/furysports.fury.orderbook.Query/OrderBooks",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).OrderBooks(ctx, req.(*QueryOrderBooksRequest))
@@ -1590,7 +1590,7 @@ func _Query_OrderBook_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/OrderBook",
+		FullMethod: "/furysports.fury.orderbook.Query/OrderBook",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).OrderBook(ctx, req.(*QueryOrderBookRequest))
@@ -1608,7 +1608,7 @@ func _Query_BookParticipations_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/BookParticipations",
+		FullMethod: "/furysports.fury.orderbook.Query/BookParticipations",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).BookParticipations(ctx, req.(*QueryBookParticipationsRequest))
@@ -1626,7 +1626,7 @@ func _Query_BookParticipation_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/BookParticipation",
+		FullMethod: "/furysports.fury.orderbook.Query/BookParticipation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).BookParticipation(ctx, req.(*QueryBookParticipationRequest))
@@ -1644,7 +1644,7 @@ func _Query_BookExposures_Handler(srv interface{}, ctx context.Context, dec func
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/BookExposures",
+		FullMethod: "/furysports.fury.orderbook.Query/BookExposures",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).BookExposures(ctx, req.(*QueryBookExposuresRequest))
@@ -1662,7 +1662,7 @@ func _Query_BookExposure_Handler(srv interface{}, ctx context.Context, dec func(
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/BookExposure",
+		FullMethod: "/furysports.fury.orderbook.Query/BookExposure",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).BookExposure(ctx, req.(*QueryBookExposureRequest))
@@ -1680,7 +1680,7 @@ func _Query_ParticipationExposures_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/ParticipationExposures",
+		FullMethod: "/furysports.fury.orderbook.Query/ParticipationExposures",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ParticipationExposures(ctx, req.(*QueryParticipationExposuresRequest))
@@ -1698,7 +1698,7 @@ func _Query_ParticipationExposure_Handler(srv interface{}, ctx context.Context, 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/ParticipationExposure",
+		FullMethod: "/furysports.fury.orderbook.Query/ParticipationExposure",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ParticipationExposure(ctx, req.(*QueryParticipationExposureRequest))
@@ -1716,7 +1716,7 @@ func _Query_HistoricalParticipationExposures_Handler(srv interface{}, ctx contex
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/HistoricalParticipationExposures",
+		FullMethod: "/furysports.fury.orderbook.Query/HistoricalParticipationExposures",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).HistoricalParticipationExposures(ctx, req.(*QueryHistoricalParticipationExposuresRequest))
@@ -1734,7 +1734,7 @@ func _Query_ParticipationFulfilledBets_Handler(srv interface{}, ctx context.Cont
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.orderbook.Query/ParticipationFulfilledBets",
+		FullMethod: "/furysports.fury.orderbook.Query/ParticipationFulfilledBets",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).ParticipationFulfilledBets(ctx, req.(*QueryParticipationFulfilledBetsRequest))
@@ -1743,7 +1743,7 @@ func _Query_ParticipationFulfilledBets_Handler(srv interface{}, ctx context.Cont
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.orderbook.Query",
+	ServiceName: "furysports.fury.orderbook.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

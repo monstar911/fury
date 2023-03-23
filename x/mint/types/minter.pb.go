@@ -78,7 +78,7 @@ func (m *Minter) GetPhaseStep() int32 {
 }
 
 func init() {
-	proto.RegisterType((*Minter)(nil), "furynetwork.fury.mint.Minter")
+	proto.RegisterType((*Minter)(nil), "furysports.fury.mint.Minter")
 }
 
 func init() { proto.RegisterFile("fury/mint/minter.proto", fileDescriptor_d31ed0ee2430eeec) }

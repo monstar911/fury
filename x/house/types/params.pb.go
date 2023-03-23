@@ -66,7 +66,7 @@ func (m *Params) XXX_DiscardUnknown() {
 var xxx_messageInfo_Params proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Params)(nil), "furynetwork.fury.house.Params")
+	proto.RegisterType((*Params)(nil), "furysports.fury.house.Params")
 }
 
 func init() { proto.RegisterFile("fury/house/params.proto", fileDescriptor_632fcdf2e68e6d32) }

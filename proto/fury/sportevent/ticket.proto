@@ -1,6 +1,6 @@
 
 syntax = "proto3";
-package furynetwork.fury.sportevent;
+package furysports.fury.sportevent;
 
 import "fury/sportevent/sport_event.proto";
 import "fury/sportevent/odds.proto";

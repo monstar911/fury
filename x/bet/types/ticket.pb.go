@@ -31,7 +31,7 @@ type BetPlacementTicketPayload struct {
 	KycData KycDataPayload `protobuf:"bytes,2,opt,name=kyc_data,json=kycData,proto3" json:"kyc_data"`
 	// odds_type is the type of odds that are going to be placed
 	// such as decimal, fraction, moneyline.
-	OddsType OddsType `protobuf:"varint,3,opt,name=odds_type,json=oddsType,proto3,enum=furynetwork.fury.bet.OddsType" json:"odds_type,omitempty"`
+	OddsType OddsType `protobuf:"varint,3,opt,name=odds_type,json=oddsType,proto3,enum=furysports.fury.bet.OddsType" json:"odds_type,omitempty"`
 }
 
 func (m *BetPlacementTicketPayload) Reset()         { *m = BetPlacementTicketPayload{} }
@@ -89,7 +89,7 @@ func (m *BetPlacementTicketPayload) GetOddsType() OddsType {
 }
 
 func init() {
-	proto.RegisterType((*BetPlacementTicketPayload)(nil), "furynetwork.fury.bet.BetPlacementTicketPayload")
+	proto.RegisterType((*BetPlacementTicketPayload)(nil), "furysports.fury.bet.BetPlacementTicketPayload")
 }
 
 func init() { proto.RegisterFile("fury/bet/ticket.proto", fileDescriptor_cf6959e7db451613) }

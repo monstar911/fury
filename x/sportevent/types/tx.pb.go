@@ -361,12 +361,12 @@ func (m *MsgUpdateSportEventResponse) GetData() *SportEvent {
 }
 
 func init() {
-	proto.RegisterType((*MsgAddSportEvent)(nil), "furynetwork.fury.sportevent.MsgAddSportEvent")
-	proto.RegisterType((*MsgAddSportEventResponse)(nil), "furynetwork.fury.sportevent.MsgAddSportEventResponse")
-	proto.RegisterType((*MsgResolveSportEvent)(nil), "furynetwork.fury.sportevent.MsgResolveSportEvent")
-	proto.RegisterType((*MsgResolveSportEventResponse)(nil), "furynetwork.fury.sportevent.MsgResolveSportEventResponse")
-	proto.RegisterType((*MsgUpdateSportEvent)(nil), "furynetwork.fury.sportevent.MsgUpdateSportEvent")
-	proto.RegisterType((*MsgUpdateSportEventResponse)(nil), "furynetwork.fury.sportevent.MsgUpdateSportEventResponse")
+	proto.RegisterType((*MsgAddSportEvent)(nil), "furysports.fury.sportevent.MsgAddSportEvent")
+	proto.RegisterType((*MsgAddSportEventResponse)(nil), "furysports.fury.sportevent.MsgAddSportEventResponse")
+	proto.RegisterType((*MsgResolveSportEvent)(nil), "furysports.fury.sportevent.MsgResolveSportEvent")
+	proto.RegisterType((*MsgResolveSportEventResponse)(nil), "furysports.fury.sportevent.MsgResolveSportEventResponse")
+	proto.RegisterType((*MsgUpdateSportEvent)(nil), "furysports.fury.sportevent.MsgUpdateSportEvent")
+	proto.RegisterType((*MsgUpdateSportEventResponse)(nil), "furysports.fury.sportevent.MsgUpdateSportEventResponse")
 }
 
 func init() { proto.RegisterFile("fury/sportevent/tx.proto", fileDescriptor_d0d8f6623c66e124) }
@@ -429,7 +429,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) AddSportEvent(ctx context.Context, in *MsgAddSportEvent, opts ...grpc.CallOption) (*MsgAddSportEventResponse, error) {
 	out := new(MsgAddSportEventResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Msg/AddSportEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Msg/AddSportEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -438,7 +438,7 @@ func (c *msgClient) AddSportEvent(ctx context.Context, in *MsgAddSportEvent, opt
 
 func (c *msgClient) ResolveSportEvent(ctx context.Context, in *MsgResolveSportEvent, opts ...grpc.CallOption) (*MsgResolveSportEventResponse, error) {
 	out := new(MsgResolveSportEventResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Msg/ResolveSportEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Msg/ResolveSportEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -447,7 +447,7 @@ func (c *msgClient) ResolveSportEvent(ctx context.Context, in *MsgResolveSportEv
 
 func (c *msgClient) UpdateSportEvent(ctx context.Context, in *MsgUpdateSportEvent, opts ...grpc.CallOption) (*MsgUpdateSportEventResponse, error) {
 	out := new(MsgUpdateSportEventResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Msg/UpdateSportEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Msg/UpdateSportEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -492,7 +492,7 @@ func _Msg_AddSportEvent_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Msg/AddSportEvent",
+		FullMethod: "/furysports.fury.sportevent.Msg/AddSportEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).AddSportEvent(ctx, req.(*MsgAddSportEvent))
@@ -510,7 +510,7 @@ func _Msg_ResolveSportEvent_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Msg/ResolveSportEvent",
+		FullMethod: "/furysports.fury.sportevent.Msg/ResolveSportEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).ResolveSportEvent(ctx, req.(*MsgResolveSportEvent))
@@ -528,7 +528,7 @@ func _Msg_UpdateSportEvent_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Msg/UpdateSportEvent",
+		FullMethod: "/furysports.fury.sportevent.Msg/UpdateSportEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).UpdateSportEvent(ctx, req.(*MsgUpdateSportEvent))
@@ -537,7 +537,7 @@ func _Msg_UpdateSportEvent_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.sportevent.Msg",
+	ServiceName: "furysports.fury.sportevent.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -65,7 +65,7 @@ func (m *Phase) XXX_DiscardUnknown() {
 var xxx_messageInfo_Phase proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterType((*Phase)(nil), "furynetwork.fury.mint.Phase")
+	proto.RegisterType((*Phase)(nil), "furysports.fury.mint.Phase")
 }
 
 func init() { proto.RegisterFile("fury/mint/phase.proto", fileDescriptor_7fc2241b526dba74) }

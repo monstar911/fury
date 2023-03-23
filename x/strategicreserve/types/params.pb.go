@@ -69,7 +69,7 @@ func (m *Params) GetCommitteeMembers() []string {
 }
 
 func init() {
-	proto.RegisterType((*Params)(nil), "furynetwork.fury.strategicreserve.Params")
+	proto.RegisterType((*Params)(nil), "furysports.fury.strategicreserve.Params")
 }
 
 func init() { proto.RegisterFile("fury/strategicreserve/params.proto", fileDescriptor_de2d95e3cc19d141) }

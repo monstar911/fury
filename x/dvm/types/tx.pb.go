@@ -243,10 +243,10 @@ func (m *MsgVotePubkeysChangeResponse) GetSuccess() bool {
 }
 
 func init() {
-	proto.RegisterType((*MsgSubmitPubkeysChangeProposalRequest)(nil), "furynetwork.fury.dvm.MsgSubmitPubkeysChangeProposalRequest")
-	proto.RegisterType((*MsgSubmitPubkeysChangeProposalResponse)(nil), "furynetwork.fury.dvm.MsgSubmitPubkeysChangeProposalResponse")
-	proto.RegisterType((*MsgVotePubkeysChangeRequest)(nil), "furynetwork.fury.dvm.MsgVotePubkeysChangeRequest")
-	proto.RegisterType((*MsgVotePubkeysChangeResponse)(nil), "furynetwork.fury.dvm.MsgVotePubkeysChangeResponse")
+	proto.RegisterType((*MsgSubmitPubkeysChangeProposalRequest)(nil), "furysports.fury.dvm.MsgSubmitPubkeysChangeProposalRequest")
+	proto.RegisterType((*MsgSubmitPubkeysChangeProposalResponse)(nil), "furysports.fury.dvm.MsgSubmitPubkeysChangeProposalResponse")
+	proto.RegisterType((*MsgVotePubkeysChangeRequest)(nil), "furysports.fury.dvm.MsgVotePubkeysChangeRequest")
+	proto.RegisterType((*MsgVotePubkeysChangeResponse)(nil), "furysports.fury.dvm.MsgVotePubkeysChangeResponse")
 }
 
 func init() { proto.RegisterFile("fury/dvm/tx.proto", fileDescriptor_78e7f1885428b6a5) }
@@ -306,7 +306,7 @@ func NewMsgClient(cc grpc1.ClientConn) MsgClient {
 
 func (c *msgClient) SubmitPubkeysChangeProposal(ctx context.Context, in *MsgSubmitPubkeysChangeProposalRequest, opts ...grpc.CallOption) (*MsgSubmitPubkeysChangeProposalResponse, error) {
 	out := new(MsgSubmitPubkeysChangeProposalResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.dvm.Msg/SubmitPubkeysChangeProposal", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.dvm.Msg/SubmitPubkeysChangeProposal", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -315,7 +315,7 @@ func (c *msgClient) SubmitPubkeysChangeProposal(ctx context.Context, in *MsgSubm
 
 func (c *msgClient) VotePubkeysChange(ctx context.Context, in *MsgVotePubkeysChangeRequest, opts ...grpc.CallOption) (*MsgVotePubkeysChangeResponse, error) {
 	out := new(MsgVotePubkeysChangeResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.dvm.Msg/VotePubkeysChange", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.dvm.Msg/VotePubkeysChange", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -357,7 +357,7 @@ func _Msg_SubmitPubkeysChangeProposal_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.dvm.Msg/SubmitPubkeysChangeProposal",
+		FullMethod: "/furysports.fury.dvm.Msg/SubmitPubkeysChangeProposal",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).SubmitPubkeysChangeProposal(ctx, req.(*MsgSubmitPubkeysChangeProposalRequest))
@@ -375,7 +375,7 @@ func _Msg_VotePubkeysChange_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.dvm.Msg/VotePubkeysChange",
+		FullMethod: "/furysports.fury.dvm.Msg/VotePubkeysChange",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MsgServer).VotePubkeysChange(ctx, req.(*MsgVotePubkeysChangeRequest))
@@ -384,7 +384,7 @@ func _Msg_VotePubkeysChange_Handler(srv interface{}, ctx context.Context, dec fu
 }
 
 var _Msg_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.dvm.Msg",
+	ServiceName: "furysports.fury.dvm.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

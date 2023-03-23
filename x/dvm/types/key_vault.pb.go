@@ -70,7 +70,7 @@ func (m *KeyVault) GetPublicKeys() []string {
 }
 
 func init() {
-	proto.RegisterType((*KeyVault)(nil), "furynetwork.fury.dvm.KeyVault")
+	proto.RegisterType((*KeyVault)(nil), "furysports.fury.dvm.KeyVault")
 }
 
 func init() { proto.RegisterFile("fury/dvm/key_vault.proto", fileDescriptor_a21a2d7ce8c462b6) }

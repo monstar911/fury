@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.orderbook;
+package furysports.fury.orderbook;
 
 option go_package = "github.com/fanfury-sports/fury/x/orderbook/types";
 

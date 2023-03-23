@@ -201,10 +201,10 @@ func (m *QueryReserverResponse) GetReserver() *Reserver {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furynetwork.fury.strategicreserve.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furynetwork.fury.strategicreserve.QueryParamsResponse")
-	proto.RegisterType((*QueryReserverRequest)(nil), "furynetwork.fury.strategicreserve.QueryReserverRequest")
-	proto.RegisterType((*QueryReserverResponse)(nil), "furynetwork.fury.strategicreserve.QueryReserverResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furysports.fury.strategicreserve.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furysports.fury.strategicreserve.QueryParamsResponse")
+	proto.RegisterType((*QueryReserverRequest)(nil), "furysports.fury.strategicreserve.QueryReserverRequest")
+	proto.RegisterType((*QueryReserverResponse)(nil), "furysports.fury.strategicreserve.QueryReserverResponse")
 }
 
 func init() { proto.RegisterFile("fury/strategicreserve/query.proto", fileDescriptor_6b5d7d659eddd962) }
@@ -264,7 +264,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.strategicreserve.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.strategicreserve.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -273,7 +273,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) Reserver(ctx context.Context, in *QueryReserverRequest, opts ...grpc.CallOption) (*QueryReserverResponse, error) {
 	out := new(QueryReserverResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.strategicreserve.Query/Reserver", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.strategicreserve.Query/Reserver", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -313,7 +313,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.strategicreserve.Query/Params",
+		FullMethod: "/furysports.fury.strategicreserve.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -331,7 +331,7 @@ func _Query_Reserver_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.strategicreserve.Query/Reserver",
+		FullMethod: "/furysports.fury.strategicreserve.Query/Reserver",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Reserver(ctx, req.(*QueryReserverRequest))
@@ -340,7 +340,7 @@ func _Query_Reserver_Handler(srv interface{}, ctx context.Context, dec func(inte
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.strategicreserve.Query",
+	ServiceName: "furysports.fury.strategicreserve.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

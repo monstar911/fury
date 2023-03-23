@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.sportevent;
+package furysports.fury.sportevent;
 
 option go_package = "github.com/fanfury-sports/fury/x/sportevent/types";
 

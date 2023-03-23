@@ -412,14 +412,14 @@ func (m *QuerySportEventsByUIDsResponse) GetFailedEvents() []string {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furynetwork.fury.sportevent.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furynetwork.fury.sportevent.QueryParamsResponse")
-	proto.RegisterType((*QuerySportEventRequest)(nil), "furynetwork.fury.sportevent.QuerySportEventRequest")
-	proto.RegisterType((*QuerySportEventResponse)(nil), "furynetwork.fury.sportevent.QuerySportEventResponse")
-	proto.RegisterType((*QuerySportEventsRequest)(nil), "furynetwork.fury.sportevent.QuerySportEventsRequest")
-	proto.RegisterType((*QuerySportEventsResponse)(nil), "furynetwork.fury.sportevent.QuerySportEventsResponse")
-	proto.RegisterType((*QuerySportEventsByUIDsRequest)(nil), "furynetwork.fury.sportevent.QuerySportEventsByUIDsRequest")
-	proto.RegisterType((*QuerySportEventsByUIDsResponse)(nil), "furynetwork.fury.sportevent.QuerySportEventsByUIDsResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furysports.fury.sportevent.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furysports.fury.sportevent.QueryParamsResponse")
+	proto.RegisterType((*QuerySportEventRequest)(nil), "furysports.fury.sportevent.QuerySportEventRequest")
+	proto.RegisterType((*QuerySportEventResponse)(nil), "furysports.fury.sportevent.QuerySportEventResponse")
+	proto.RegisterType((*QuerySportEventsRequest)(nil), "furysports.fury.sportevent.QuerySportEventsRequest")
+	proto.RegisterType((*QuerySportEventsResponse)(nil), "furysports.fury.sportevent.QuerySportEventsResponse")
+	proto.RegisterType((*QuerySportEventsByUIDsRequest)(nil), "furysports.fury.sportevent.QuerySportEventsByUIDsRequest")
+	proto.RegisterType((*QuerySportEventsByUIDsResponse)(nil), "furysports.fury.sportevent.QuerySportEventsByUIDsResponse")
 }
 
 func init() { proto.RegisterFile("fury/sportevent/query.proto", fileDescriptor_45776640ee419e76) }
@@ -499,7 +499,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -508,7 +508,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) SportEvent(ctx context.Context, in *QuerySportEventRequest, opts ...grpc.CallOption) (*QuerySportEventResponse, error) {
 	out := new(QuerySportEventResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Query/SportEvent", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Query/SportEvent", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -517,7 +517,7 @@ func (c *queryClient) SportEvent(ctx context.Context, in *QuerySportEventRequest
 
 func (c *queryClient) SportEvents(ctx context.Context, in *QuerySportEventsRequest, opts ...grpc.CallOption) (*QuerySportEventsResponse, error) {
 	out := new(QuerySportEventsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Query/SportEvents", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Query/SportEvents", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -526,7 +526,7 @@ func (c *queryClient) SportEvents(ctx context.Context, in *QuerySportEventsReque
 
 func (c *queryClient) SportEventsByUIDs(ctx context.Context, in *QuerySportEventsByUIDsRequest, opts ...grpc.CallOption) (*QuerySportEventsByUIDsResponse, error) {
 	out := new(QuerySportEventsByUIDsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.sportevent.Query/SportEventsByUIDs", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.sportevent.Query/SportEventsByUIDs", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -576,7 +576,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Query/Params",
+		FullMethod: "/furysports.fury.sportevent.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -594,7 +594,7 @@ func _Query_SportEvent_Handler(srv interface{}, ctx context.Context, dec func(in
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Query/SportEvent",
+		FullMethod: "/furysports.fury.sportevent.Query/SportEvent",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).SportEvent(ctx, req.(*QuerySportEventRequest))
@@ -612,7 +612,7 @@ func _Query_SportEvents_Handler(srv interface{}, ctx context.Context, dec func(i
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Query/SportEvents",
+		FullMethod: "/furysports.fury.sportevent.Query/SportEvents",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).SportEvents(ctx, req.(*QuerySportEventsRequest))
@@ -630,7 +630,7 @@ func _Query_SportEventsByUIDs_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.sportevent.Query/SportEventsByUIDs",
+		FullMethod: "/furysports.fury.sportevent.Query/SportEventsByUIDs",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).SportEventsByUIDs(ctx, req.(*QuerySportEventsByUIDsRequest))
@@ -639,7 +639,7 @@ func _Query_SportEventsByUIDs_Handler(srv interface{}, ctx context.Context, dec 
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.sportevent.Query",
+	ServiceName: "furysports.fury.sportevent.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

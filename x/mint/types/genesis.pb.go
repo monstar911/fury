@@ -79,7 +79,7 @@ func (m *GenesisState) GetParams() Params {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furynetwork.fury.mint.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furysports.fury.mint.GenesisState")
 }
 
 func init() { proto.RegisterFile("fury/mint/genesis.proto", fileDescriptor_5f482053ea27dcec) }

@@ -88,7 +88,7 @@ func (m *KycDataPayload) GetID() string {
 }
 
 func init() {
-	proto.RegisterType((*KycDataPayload)(nil), "furynetwork.fury.bet.KycDataPayload")
+	proto.RegisterType((*KycDataPayload)(nil), "furysports.fury.bet.KycDataPayload")
 }
 
 func init() { proto.RegisterFile("fury/bet/kyc.proto", fileDescriptor_13abc80c3002dbc4) }

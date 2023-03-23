@@ -79,7 +79,7 @@ func (m *Odds) GetMeta() string {
 }
 
 func init() {
-	proto.RegisterType((*Odds)(nil), "furynetwork.fury.sportevent.Odds")
+	proto.RegisterType((*Odds)(nil), "furysports.fury.sportevent.Odds")
 }
 
 func init() { proto.RegisterFile("fury/sportevent/odds.proto", fileDescriptor_c4eaa1643bcc33f0) }

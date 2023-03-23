@@ -59,7 +59,7 @@ type Vote struct {
 	// public_key is the public key of the voter.
 	PublicKey string `protobuf:"bytes,1,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
 	// vote is the vote enum value.
-	Vote ProposalVote `protobuf:"varint,2,opt,name=vote,proto3,enum=furynetwork.fury.dvm.ProposalVote" json:"vote,omitempty"`
+	Vote ProposalVote `protobuf:"varint,2,opt,name=vote,proto3,enum=furysports.fury.dvm.ProposalVote" json:"vote,omitempty"`
 }
 
 func (m *Vote) Reset()         { *m = Vote{} }
@@ -110,8 +110,8 @@ func (m *Vote) GetVote() ProposalVote {
 }
 
 func init() {
-	proto.RegisterEnum("furynetwork.fury.dvm.ProposalVote", ProposalVote_name, ProposalVote_value)
-	proto.RegisterType((*Vote)(nil), "furynetwork.fury.dvm.Vote")
+	proto.RegisterEnum("furysports.fury.dvm.ProposalVote", ProposalVote_name, ProposalVote_value)
+	proto.RegisterType((*Vote)(nil), "furysports.fury.dvm.Vote")
 }
 
 func init() { proto.RegisterFile("fury/dvm/vote.proto", fileDescriptor_c881d83c5c5286a5) }

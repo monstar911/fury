@@ -441,14 +441,14 @@ func (m *QueryDepositorWithdrawalsResponse) GetPagination() *query.PageResponse 
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furynetwork.fury.house.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furynetwork.fury.house.QueryParamsResponse")
-	proto.RegisterType((*QueryDepositsRequest)(nil), "furynetwork.fury.house.QueryDepositsRequest")
-	proto.RegisterType((*QueryDepositsResponse)(nil), "furynetwork.fury.house.QueryDepositsResponse")
-	proto.RegisterType((*QueryDepositorDepositsRequest)(nil), "furynetwork.fury.house.QueryDepositorDepositsRequest")
-	proto.RegisterType((*QueryDepositorDepositsResponse)(nil), "furynetwork.fury.house.QueryDepositorDepositsResponse")
-	proto.RegisterType((*QueryDepositorWithdrawalsRequest)(nil), "furynetwork.fury.house.QueryDepositorWithdrawalsRequest")
-	proto.RegisterType((*QueryDepositorWithdrawalsResponse)(nil), "furynetwork.fury.house.QueryDepositorWithdrawalsResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furysports.fury.house.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furysports.fury.house.QueryParamsResponse")
+	proto.RegisterType((*QueryDepositsRequest)(nil), "furysports.fury.house.QueryDepositsRequest")
+	proto.RegisterType((*QueryDepositsResponse)(nil), "furysports.fury.house.QueryDepositsResponse")
+	proto.RegisterType((*QueryDepositorDepositsRequest)(nil), "furysports.fury.house.QueryDepositorDepositsRequest")
+	proto.RegisterType((*QueryDepositorDepositsResponse)(nil), "furysports.fury.house.QueryDepositorDepositsResponse")
+	proto.RegisterType((*QueryDepositorWithdrawalsRequest)(nil), "furysports.fury.house.QueryDepositorWithdrawalsRequest")
+	proto.RegisterType((*QueryDepositorWithdrawalsResponse)(nil), "furysports.fury.house.QueryDepositorWithdrawalsResponse")
 }
 
 func init() { proto.RegisterFile("fury/house/query.proto", fileDescriptor_436b89bf9285a4cb) }
@@ -527,7 +527,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.house.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.house.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -536,7 +536,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) Deposits(ctx context.Context, in *QueryDepositsRequest, opts ...grpc.CallOption) (*QueryDepositsResponse, error) {
 	out := new(QueryDepositsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.house.Query/Deposits", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.house.Query/Deposits", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -545,7 +545,7 @@ func (c *queryClient) Deposits(ctx context.Context, in *QueryDepositsRequest, op
 
 func (c *queryClient) DepositorDeposits(ctx context.Context, in *QueryDepositorDepositsRequest, opts ...grpc.CallOption) (*QueryDepositorDepositsResponse, error) {
 	out := new(QueryDepositorDepositsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.house.Query/DepositorDeposits", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.house.Query/DepositorDeposits", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -554,7 +554,7 @@ func (c *queryClient) DepositorDeposits(ctx context.Context, in *QueryDepositorD
 
 func (c *queryClient) DepositorWithdrawals(ctx context.Context, in *QueryDepositorWithdrawalsRequest, opts ...grpc.CallOption) (*QueryDepositorWithdrawalsResponse, error) {
 	out := new(QueryDepositorWithdrawalsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.house.Query/DepositorWithdrawals", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.house.Query/DepositorWithdrawals", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -604,7 +604,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.house.Query/Params",
+		FullMethod: "/furysports.fury.house.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -622,7 +622,7 @@ func _Query_Deposits_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.house.Query/Deposits",
+		FullMethod: "/furysports.fury.house.Query/Deposits",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Deposits(ctx, req.(*QueryDepositsRequest))
@@ -640,7 +640,7 @@ func _Query_DepositorDeposits_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.house.Query/DepositorDeposits",
+		FullMethod: "/furysports.fury.house.Query/DepositorDeposits",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).DepositorDeposits(ctx, req.(*QueryDepositorDepositsRequest))
@@ -658,7 +658,7 @@ func _Query_DepositorWithdrawals_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.house.Query/DepositorWithdrawals",
+		FullMethod: "/furysports.fury.house.Query/DepositorWithdrawals",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).DepositorWithdrawals(ctx, req.(*QueryDepositorWithdrawalsRequest))
@@ -667,7 +667,7 @@ func _Query_DepositorWithdrawals_Handler(srv interface{}, ctx context.Context, d
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.house.Query",
+	ServiceName: "furysports.fury.house.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

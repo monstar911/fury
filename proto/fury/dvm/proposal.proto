@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.dvm;
+package furysports.fury.dvm;
 
 import "gogoproto/gogo.proto";
 import "fury/dvm/ticket.proto";

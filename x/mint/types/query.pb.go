@@ -447,16 +447,16 @@ func (m *QueryEndPhaseStatusResponse) GetIsInEndPhase() bool {
 }
 
 func init() {
-	proto.RegisterType((*QueryParamsRequest)(nil), "furynetwork.fury.mint.QueryParamsRequest")
-	proto.RegisterType((*QueryParamsResponse)(nil), "furynetwork.fury.mint.QueryParamsResponse")
-	proto.RegisterType((*QueryInflationRequest)(nil), "furynetwork.fury.mint.QueryInflationRequest")
-	proto.RegisterType((*QueryInflationResponse)(nil), "furynetwork.fury.mint.QueryInflationResponse")
-	proto.RegisterType((*QueryPhaseStepRequest)(nil), "furynetwork.fury.mint.QueryPhaseStepRequest")
-	proto.RegisterType((*QueryPhaseStepResponse)(nil), "furynetwork.fury.mint.QueryPhaseStepResponse")
-	proto.RegisterType((*QueryPhaseProvisionsRequest)(nil), "furynetwork.fury.mint.QueryPhaseProvisionsRequest")
-	proto.RegisterType((*QueryPhaseProvisionsResponse)(nil), "furynetwork.fury.mint.QueryPhaseProvisionsResponse")
-	proto.RegisterType((*QueryEndPhaseStatusRequest)(nil), "furynetwork.fury.mint.QueryEndPhaseStatusRequest")
-	proto.RegisterType((*QueryEndPhaseStatusResponse)(nil), "furynetwork.fury.mint.QueryEndPhaseStatusResponse")
+	proto.RegisterType((*QueryParamsRequest)(nil), "furysports.fury.mint.QueryParamsRequest")
+	proto.RegisterType((*QueryParamsResponse)(nil), "furysports.fury.mint.QueryParamsResponse")
+	proto.RegisterType((*QueryInflationRequest)(nil), "furysports.fury.mint.QueryInflationRequest")
+	proto.RegisterType((*QueryInflationResponse)(nil), "furysports.fury.mint.QueryInflationResponse")
+	proto.RegisterType((*QueryPhaseStepRequest)(nil), "furysports.fury.mint.QueryPhaseStepRequest")
+	proto.RegisterType((*QueryPhaseStepResponse)(nil), "furysports.fury.mint.QueryPhaseStepResponse")
+	proto.RegisterType((*QueryPhaseProvisionsRequest)(nil), "furysports.fury.mint.QueryPhaseProvisionsRequest")
+	proto.RegisterType((*QueryPhaseProvisionsResponse)(nil), "furysports.fury.mint.QueryPhaseProvisionsResponse")
+	proto.RegisterType((*QueryEndPhaseStatusRequest)(nil), "furysports.fury.mint.QueryEndPhaseStatusRequest")
+	proto.RegisterType((*QueryEndPhaseStatusResponse)(nil), "furysports.fury.mint.QueryEndPhaseStatusResponse")
 }
 
 func init() { proto.RegisterFile("fury/mint/query.proto", fileDescriptor_448e6714a1bb8862) }
@@ -536,7 +536,7 @@ func NewQueryClient(cc grpc1.ClientConn) QueryClient {
 
 func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts ...grpc.CallOption) (*QueryParamsResponse, error) {
 	out := new(QueryParamsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.mint.Query/Params", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.mint.Query/Params", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -545,7 +545,7 @@ func (c *queryClient) Params(ctx context.Context, in *QueryParamsRequest, opts .
 
 func (c *queryClient) Inflation(ctx context.Context, in *QueryInflationRequest, opts ...grpc.CallOption) (*QueryInflationResponse, error) {
 	out := new(QueryInflationResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.mint.Query/Inflation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.mint.Query/Inflation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -554,7 +554,7 @@ func (c *queryClient) Inflation(ctx context.Context, in *QueryInflationRequest, 
 
 func (c *queryClient) PhaseStep(ctx context.Context, in *QueryPhaseStepRequest, opts ...grpc.CallOption) (*QueryPhaseStepResponse, error) {
 	out := new(QueryPhaseStepResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.mint.Query/PhaseStep", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.mint.Query/PhaseStep", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -563,7 +563,7 @@ func (c *queryClient) PhaseStep(ctx context.Context, in *QueryPhaseStepRequest, 
 
 func (c *queryClient) PhaseProvisions(ctx context.Context, in *QueryPhaseProvisionsRequest, opts ...grpc.CallOption) (*QueryPhaseProvisionsResponse, error) {
 	out := new(QueryPhaseProvisionsResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.mint.Query/PhaseProvisions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.mint.Query/PhaseProvisions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -572,7 +572,7 @@ func (c *queryClient) PhaseProvisions(ctx context.Context, in *QueryPhaseProvisi
 
 func (c *queryClient) EndPhaseStatus(ctx context.Context, in *QueryEndPhaseStatusRequest, opts ...grpc.CallOption) (*QueryEndPhaseStatusResponse, error) {
 	out := new(QueryEndPhaseStatusResponse)
-	err := c.cc.Invoke(ctx, "/furynetwork.fury.mint.Query/EndPhaseStatus", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/furysports.fury.mint.Query/EndPhaseStatus", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -627,7 +627,7 @@ func _Query_Params_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.mint.Query/Params",
+		FullMethod: "/furysports.fury.mint.Query/Params",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Params(ctx, req.(*QueryParamsRequest))
@@ -645,7 +645,7 @@ func _Query_Inflation_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.mint.Query/Inflation",
+		FullMethod: "/furysports.fury.mint.Query/Inflation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).Inflation(ctx, req.(*QueryInflationRequest))
@@ -663,7 +663,7 @@ func _Query_PhaseStep_Handler(srv interface{}, ctx context.Context, dec func(int
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.mint.Query/PhaseStep",
+		FullMethod: "/furysports.fury.mint.Query/PhaseStep",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).PhaseStep(ctx, req.(*QueryPhaseStepRequest))
@@ -681,7 +681,7 @@ func _Query_PhaseProvisions_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.mint.Query/PhaseProvisions",
+		FullMethod: "/furysports.fury.mint.Query/PhaseProvisions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).PhaseProvisions(ctx, req.(*QueryPhaseProvisionsRequest))
@@ -699,7 +699,7 @@ func _Query_EndPhaseStatus_Handler(srv interface{}, ctx context.Context, dec fun
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/furynetwork.fury.mint.Query/EndPhaseStatus",
+		FullMethod: "/furysports.fury.mint.Query/EndPhaseStatus",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(QueryServer).EndPhaseStatus(ctx, req.(*QueryEndPhaseStatusRequest))
@@ -708,7 +708,7 @@ func _Query_EndPhaseStatus_Handler(srv interface{}, ctx context.Context, dec fun
 }
 
 var _Query_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "furynetwork.fury.mint.Query",
+	ServiceName: "furysports.fury.mint.Query",
 	HandlerType: (*QueryServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

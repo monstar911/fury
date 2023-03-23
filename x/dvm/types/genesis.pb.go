@@ -108,7 +108,7 @@ func (m *GenesisState) GetProposalStats() ProposalStats {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furynetwork.fury.dvm.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furysports.fury.dvm.GenesisState")
 }
 
 func init() { proto.RegisterFile("fury/dvm/genesis.proto", fileDescriptor_35c848c2a4360089) }

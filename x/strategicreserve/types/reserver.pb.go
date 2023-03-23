@@ -69,7 +69,7 @@ func (m *Reserver) GetSrPool() *SRPool {
 }
 
 func init() {
-	proto.RegisterType((*Reserver)(nil), "furynetwork.fury.strategicreserve.Reserver")
+	proto.RegisterType((*Reserver)(nil), "furysports.fury.strategicreserve.Reserver")
 }
 
 func init() {

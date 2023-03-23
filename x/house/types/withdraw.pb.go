@@ -68,7 +68,7 @@ type Withdrawal struct {
 	// participation_index is the id corresponding to the book participation
 	ParticipationIndex uint64 `protobuf:"varint,4,opt,name=participation_index,json=participationIndex,proto3" json:"participation_index,omitempty" yaml:"participation_index"`
 	// mode is the withdrawal mode enum value
-	Mode WithdrawalMode `protobuf:"varint,5,opt,name=mode,proto3,enum=furynetwork.fury.house.WithdrawalMode" json:"mode,omitempty" yaml:"mode"`
+	Mode WithdrawalMode `protobuf:"varint,5,opt,name=mode,proto3,enum=furysports.fury.house.WithdrawalMode" json:"mode,omitempty" yaml:"mode"`
 	// amount is the amount being withdrawn.
 	Amount github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,6,opt,name=amount,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"amount" yaml:"amount"`
 }
@@ -106,8 +106,8 @@ func (m *Withdrawal) XXX_DiscardUnknown() {
 var xxx_messageInfo_Withdrawal proto.InternalMessageInfo
 
 func init() {
-	proto.RegisterEnum("furynetwork.fury.house.WithdrawalMode", WithdrawalMode_name, WithdrawalMode_value)
-	proto.RegisterType((*Withdrawal)(nil), "furynetwork.fury.house.Withdrawal")
+	proto.RegisterEnum("furysports.fury.house.WithdrawalMode", WithdrawalMode_name, WithdrawalMode_value)
+	proto.RegisterType((*Withdrawal)(nil), "furysports.fury.house.Withdrawal")
 }
 
 func init() { proto.RegisterFile("fury/house/withdraw.proto", fileDescriptor_9ca852402ebf549d) }

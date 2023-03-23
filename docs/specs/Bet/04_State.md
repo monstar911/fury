@@ -54,7 +54,7 @@ message Bet {
 
   // odds_type is the type of odds that
   // user choose such as decimal, fractional.
-  furynetwork.fury.bet.OddsType odds_type = 4;
+  furysports.fury.bet.OddsType odds_type = 4;
 
   // odds_value is the odds on which the bet is placed.
   string odds_value = 5;

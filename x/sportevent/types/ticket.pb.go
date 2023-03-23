@@ -35,7 +35,7 @@ type SportEventAddTicketPayload struct {
 	// odds is the list of odds of the sport-event.
 	Odds []*Odds `protobuf:"bytes,4,rep,name=odds,proto3" json:"odds,omitempty"`
 	// status is the current status of the sport-event.
-	Status SportEventStatus `protobuf:"varint,5,opt,name=status,proto3,enum=furynetwork.fury.sportevent.SportEventStatus" json:"status,omitempty"`
+	Status SportEventStatus `protobuf:"varint,5,opt,name=status,proto3,enum=furysports.fury.sportevent.SportEventStatus" json:"status,omitempty"`
 	// creator is the address of the creator of sport-event.
 	Creator string `protobuf:"bytes,6,opt,name=creator,proto3" json:"creator,omitempty"`
 	// min_bet_amount is the minimum allowed bet amount for a sport-event.
@@ -144,7 +144,7 @@ type SportEventUpdateTicketPayload struct {
 	// bet_fee is the fee that thebettor needs to pay to bet on the sport-event.
 	BetFee github_com_cosmos_cosmos_sdk_types.Int `protobuf:"bytes,5,opt,name=bet_fee,json=betFee,proto3,customtype=github.com/cosmos/cosmos-sdk/types.Int" json:"bet_fee"`
 	// status is the status of the resolution.
-	Status SportEventStatus `protobuf:"varint,6,opt,name=status,proto3,enum=furynetwork.fury.sportevent.SportEventStatus" json:"status,omitempty"`
+	Status SportEventStatus `protobuf:"varint,6,opt,name=status,proto3,enum=furysports.fury.sportevent.SportEventStatus" json:"status,omitempty"`
 }
 
 func (m *SportEventUpdateTicketPayload) Reset()         { *m = SportEventUpdateTicketPayload{} }
@@ -219,7 +219,7 @@ type SportEventResolutionTicketPayload struct {
 	// odds.
 	WinnerOddsUIDs []string `protobuf:"bytes,3,rep,name=winner_odds_uids,proto3" json:"winner_odds_uids"`
 	// status is the status of the resolution.
-	Status SportEventStatus `protobuf:"varint,4,opt,name=status,proto3,enum=furynetwork.fury.sportevent.SportEventStatus" json:"status,omitempty"`
+	Status SportEventStatus `protobuf:"varint,4,opt,name=status,proto3,enum=furysports.fury.sportevent.SportEventStatus" json:"status,omitempty"`
 }
 
 func (m *SportEventResolutionTicketPayload) Reset()         { *m = SportEventResolutionTicketPayload{} }
@@ -284,9 +284,9 @@ func (m *SportEventResolutionTicketPayload) GetStatus() SportEventStatus {
 }
 
 func init() {
-	proto.RegisterType((*SportEventAddTicketPayload)(nil), "furynetwork.fury.sportevent.SportEventAddTicketPayload")
-	proto.RegisterType((*SportEventUpdateTicketPayload)(nil), "furynetwork.fury.sportevent.SportEventUpdateTicketPayload")
-	proto.RegisterType((*SportEventResolutionTicketPayload)(nil), "furynetwork.fury.sportevent.SportEventResolutionTicketPayload")
+	proto.RegisterType((*SportEventAddTicketPayload)(nil), "furysports.fury.sportevent.SportEventAddTicketPayload")
+	proto.RegisterType((*SportEventUpdateTicketPayload)(nil), "furysports.fury.sportevent.SportEventUpdateTicketPayload")
+	proto.RegisterType((*SportEventResolutionTicketPayload)(nil), "furysports.fury.sportevent.SportEventResolutionTicketPayload")
 }
 
 func init() { proto.RegisterFile("fury/sportevent/ticket.proto", fileDescriptor_b7e970e0fce71fcc) }

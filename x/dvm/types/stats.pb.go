@@ -69,7 +69,7 @@ func (m *ProposalStats) GetPubkeysChangeCount() uint64 {
 }
 
 func init() {
-	proto.RegisterType((*ProposalStats)(nil), "furynetwork.fury.dvm.ProposalStats")
+	proto.RegisterType((*ProposalStats)(nil), "furysports.fury.dvm.ProposalStats")
 }
 
 func init() { proto.RegisterFile("fury/dvm/stats.proto", fileDescriptor_18b1583139df99d6) }

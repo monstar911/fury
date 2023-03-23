@@ -82,7 +82,7 @@ func (m *PlaceBetFields) GetTicket() string {
 }
 
 func init() {
-	proto.RegisterType((*PlaceBetFields)(nil), "furynetwork.fury.bet.PlaceBetFields")
+	proto.RegisterType((*PlaceBetFields)(nil), "furysports.fury.bet.PlaceBetFields")
 }
 
 func init() { proto.RegisterFile("fury/bet/place_bet_fields.proto", fileDescriptor_d186d55bc7cfa5da) }

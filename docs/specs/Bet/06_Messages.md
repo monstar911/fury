@@ -40,7 +40,7 @@ message PlaceBetFields {
   string ticket = 3;
 
   // odds_type is the type of odds bettor choose such as decimal, fraction
-  furynetwork.fury.bet.OddsType odds_type = 4;
+  furysports.fury.bet.OddsType odds_type = 4;
 }
 
 // MsgPlaceBetResponse is the returning value in the response of MsgPlaceBet request

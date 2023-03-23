@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.strategicreserve;
+package furysports.fury.strategicreserve;
 
 import "gogoproto/gogo.proto";
 

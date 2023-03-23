@@ -90,7 +90,7 @@ func (m *Params) GetPhases() []Phase {
 }
 
 func init() {
-	proto.RegisterType((*Params)(nil), "furynetwork.fury.mint.Params")
+	proto.RegisterType((*Params)(nil), "furysports.fury.mint.Params")
 }
 
 func init() { proto.RegisterFile("fury/mint/params.proto", fileDescriptor_a4bb1a108a109550) }

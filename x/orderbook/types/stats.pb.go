@@ -69,7 +69,7 @@ func (m *OrderBookStats) GetResolvedUnsettled() []string {
 }
 
 func init() {
-	proto.RegisterType((*OrderBookStats)(nil), "furynetwork.fury.orderbook.OrderBookStats")
+	proto.RegisterType((*OrderBookStats)(nil), "furysports.fury.orderbook.OrderBookStats")
 }
 
 func init() { proto.RegisterFile("fury/orderbook/stats.proto", fileDescriptor_bbf84578c9c8bd09) }

@@ -155,8 +155,8 @@ func (m *ParticipationBetPair) GetBetUID() string {
 }
 
 func init() {
-	proto.RegisterType((*BookParticipation)(nil), "furynetwork.fury.orderbook.BookParticipation")
-	proto.RegisterType((*ParticipationBetPair)(nil), "furynetwork.fury.orderbook.ParticipationBetPair")
+	proto.RegisterType((*BookParticipation)(nil), "furysports.fury.orderbook.BookParticipation")
+	proto.RegisterType((*ParticipationBetPair)(nil), "furysports.fury.orderbook.ParticipationBetPair")
 }
 
 func init() { proto.RegisterFile("fury/orderbook/participation.proto", fileDescriptor_2962bcb47b63c36a) }

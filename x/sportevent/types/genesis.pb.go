@@ -89,7 +89,7 @@ func (m *GenesisState) GetStats() SportEventStats {
 }
 
 func init() {
-	proto.RegisterType((*GenesisState)(nil), "furynetwork.fury.sportevent.GenesisState")
+	proto.RegisterType((*GenesisState)(nil), "furysports.fury.sportevent.GenesisState")
 }
 
 func init() { proto.RegisterFile("fury/sportevent/genesis.proto", fileDescriptor_26f70745c80b7c24) }

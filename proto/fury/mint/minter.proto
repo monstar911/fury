@@ -1,5 +1,5 @@
 syntax = "proto3";
-package furynetwork.fury.mint;
+package furysports.fury.mint;
 
 option go_package = "github.com/fanfury-sports/fury/x/mint/types";
 

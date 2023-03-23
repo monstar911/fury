@@ -148,7 +148,7 @@ type PublicKeysChangeFinishedProposal struct {
 	// proposal is the proposal for additions and removals of pub keys.
 	Proposal PublicKeysChangeProposal `protobuf:"bytes,1,opt,name=proposal,proto3" json:"proposal"`
 	// result is the result of the finished proposal.
-	Result ProposalResult `protobuf:"varint,2,opt,name=result,proto3,enum=furynetwork.fury.dvm.ProposalResult" json:"result,omitempty"`
+	Result ProposalResult `protobuf:"varint,2,opt,name=result,proto3,enum=furysports.fury.dvm.ProposalResult" json:"result,omitempty"`
 	// result_meta is the metadata related to the result of the finished proposal.
 	ResultMeta string `protobuf:"bytes,3,opt,name=result_meta,json=resultMeta,proto3" json:"result_meta,omitempty"`
 	// finish_ts is the block time that the proposal is set as finished.
@@ -217,9 +217,9 @@ func (m *PublicKeysChangeFinishedProposal) GetFinishTS() int64 {
 }
 
 func init() {
-	proto.RegisterEnum("furynetwork.fury.dvm.ProposalResult", ProposalResult_name, ProposalResult_value)
-	proto.RegisterType((*PublicKeysChangeProposal)(nil), "furynetwork.fury.dvm.PublicKeysChangeProposal")
-	proto.RegisterType((*PublicKeysChangeFinishedProposal)(nil), "furynetwork.fury.dvm.PublicKeysChangeFinishedProposal")
+	proto.RegisterEnum("furysports.fury.dvm.ProposalResult", ProposalResult_name, ProposalResult_value)
+	proto.RegisterType((*PublicKeysChangeProposal)(nil), "furysports.fury.dvm.PublicKeysChangeProposal")
+	proto.RegisterType((*PublicKeysChangeFinishedProposal)(nil), "furysports.fury.dvm.PublicKeysChangeFinishedProposal")
 }
 
 func init() { proto.RegisterFile("fury/dvm/proposal.proto", fileDescriptor_29058a11b4a243d6) }
