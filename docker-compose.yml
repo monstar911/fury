@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  furynode:
+    container_name: furynode0
+    image: fanfury/fanfury:testnet
+    ports:
+    - "26656-26657:26656-26657"
+    volumes:
+    - ./build:/home
+    command: /bin/sh -c 'cd /home/nodecluster/node0 && furyd start --home fury'
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.2
+
+  furynode1:
+    container_name: furynode1
+    image: fanfury/fanfury:testnet
+    ports:
+    - "26659-26660:26656-26657"
+    volumes:
+    - ./build:/home
+    command: /bin/sh -c 'cd /home/nodecluster/node1 && furyd start --home fury'
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.3
+
+  furynode2:
+    container_name: furynode2
+    image: fanfury/fanfury:testnet
+    ports:
+    - "26661-26662:26656-26657"
+    volumes:
+    - ./build:/home
+    command: /bin/sh -c 'cd /home/nodecluster/node2 && furyd start --home fury'
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.4
+
+  furynode3:
+    container_name: furynode3
+    image: fanfury/fanfury:testnet
+    ports:
+    - "26663-26664:26656-26657"
+    volumes:
+    - ./build:/home
+    command: /bin/sh -c 'cd /home/nodecluster/node3 && fury startd --home fury'
+    networks:
+      localnet:
+        ipv4_address: 192.168.10.5
+
+networks:
+  localnet:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: 192.168.10.0/16
