@@ -323,3 +323,22 @@ SONAR_PROJECT_KEY := $(subst $(subst ,, ),:,$(subst /,--,$(SONAR_PROJECT_KEY)))
 		sonarsource/sonar-scanner-cli \
 		-D"sonar.projectKey=$(SONAR_PROJECT_KEY)" \
 		-Dproject.settings=sonar-project.properties
+
+
+###############################################################################
+###                                Localnet                                 ###
+###############################################################################
+
+
+build-docker-fury:
+	@$(MAKE) -C networks/fury
+
+# Run a 4-node testnet locally
+localnet-start: build-fury-linux localnet-stop
+	@if ! [ -f build/node0/fury/config/genesis.json ]; then docker run --rm -v $(CURDIR)/build:/fury:Z fanfury/fanfury:testnet testnet --v 4 -o . --starting-ip-address 192.168.10.2 --keyring-backend=test ; fi
+	docker-compose up -d
+
+localnet-stop:
+	docker-compose down
+
+.PHONY: build-docker-fury localnet-start localnet-stop
