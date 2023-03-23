@@ -134,6 +134,9 @@ $(BUILDDIR)/:
 build-linux: go.sum
 	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
 
+build-fury-linux: go.sum
+	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
+
 go-mod-cache: go.sum
 	@echo "--> Download go modules to local cache"
 	@go mod download
