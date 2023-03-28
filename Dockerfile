@@ -1,5 +1,5 @@
 #
-# Build image: docker build -t fanfury/fanfury:testnet .
+# Build image: docker build -t fanfury/fanfury:furyd .
 #
 FROM golang:1.18-alpine3.16 as builder
 
@@ -14,7 +14,7 @@ COPY . .
 # Install minimum necessary dependencies
 RUN apk add --no-cache $PACKAGES
 
-RUN make build
+RUN make build-linux
 
 # ----------------------------
 

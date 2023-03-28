@@ -3,7 +3,7 @@ version: '3'
 services:
   furynode:
     container_name: furynode0
-    image: fanfury/fanfury:testnet
+    image: fanfury/fanfury:furyd
     ports:
     - "26656-26657:26656-26657"
     volumes:
@@ -15,7 +15,7 @@ services:
 
   furynode1:
     container_name: furynode1
-    image: fanfury/fanfury:testnet
+    image: fanfury/fanfury:furyd
     ports:
     - "26659-26660:26656-26657"
     volumes:
@@ -27,7 +27,7 @@ services:
 
   furynode2:
     container_name: furynode2
-    image: fanfury/fanfury:testnet
+    image: fanfury/fanfury:furyd
     ports:
     - "26661-26662:26656-26657"
     volumes:
@@ -39,7 +39,7 @@ services:
 
   furynode3:
     container_name: furynode3
-    image: fanfury/fanfury:testnet
+    image: fanfury/fanfury:furyd
     ports:
     - "26663-26664:26656-26657"
     volumes:
