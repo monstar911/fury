@@ -9,13 +9,6 @@ validators:
     bonded: "1000000000000ufury"
 genesis:
   app_state:
-    bank:
-      balances:
-        - address: "did:fury:1cjwa5pflkrhp04fuswzwfnjgk8l3at6qezz6q0"
-          coins: [{"denom": "ufury", "amount": "500000000000"}]
-      supply:
-        - denom: "ufury"
-          amount: "500000000000"
     staking:
       params:
         bond_denom: "ufury"
